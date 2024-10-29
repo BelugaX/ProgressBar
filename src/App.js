@@ -6,11 +6,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 500px; /* Set a maximum width */
-  margin: 0 auto; /* Center the container */
+  max-width: 500px;
+  margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc; /* Optional: Add a border to visualize the container */
-  border-radius: 8px; /* Optional: Rounded corners */
+  border: 1px solid #ccc;
+  border-radius: 8px;
 `;
 
 const ButtonContainer = styled.div`
@@ -23,12 +23,12 @@ const App = () => {
   const [progress, setProgress] = useState(0);
 
   const increaseProgress = () => {
-    setProgress((prev) => Math.min(prev + 10, 100)); // Increase progress by 10%
+    setProgress((prev) => Math.min(prev + 10, 100));
     if (progress === 100) alert(`Your Progress is ${progress}%`);
   };
 
   const decreaseProgress = () => {
-    setProgress((prev) => Math.min(prev - 10, 100)); // Decrease progress by 10%
+    setProgress((prev) => Math.min(prev - 10, 100));
     if (progress <= 0) alert("Progress cannot be Negative");
     setProgress(0);
   };
